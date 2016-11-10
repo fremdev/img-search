@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Search Abstraction Layer Microservice</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Search Abstraction Layer Microservice</h1>
+      <blockquote>
+        User stories:
+        <ol>
+          <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+          <li>I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+          <li>I can get a list of the most recently submitted search strings.</li>
+        </ol>
+      </blockquote>
+      <h3>Example Usage</h3>
+      <ul>
+        <li><a href="https://img-search-js.herokuapp.com/api/search/fish?offset=3" target="_blank"><code>https://img-search-js.herokuapp.com/api/search/fish?offset=3</code></a></li>
+        <li><a href="https://img-search-js.herokuapp.com/api/latest" target="_blank"><code>https://img-search-js.herokuapp.com/api/latest</code></a></li>
+      </ul>
+
+      <h3>Example output: Search</h3>
+      <pre><code>      [
+        {
+          url: "http://i.imgur.com/tOFALkYh.gif",
+          snippet: "Who says you can't pet your fish",
+          context: "https://imgur.com/tOFALkY"
+        },
+        {
+          url: "http://i.imgur.com/9oLg394.gif",
+          snippet: "This Girl Was Surprised by A pregnant Fish (Batoids) that had 12 pups",
+          context: "https://imgur.com/9oLg394"
+        },
+
+        */ More objects here */
+      ]</code></pre>
+      <h3>Example Output: Latest queries</h3>
+      <pre><code>      [
+        {
+          term: "fish",
+          when: "2016-11-10T19:27:18.059Z"
+        },
+        {
+          term: "London",
+          when: "2016-11-10T19:26:39.560Z"
+        },
+        {
+          term: "lion",
+          when: "2016-11-10T18:36:46.503Z"
+          },
+
+          */ More objects here */
+      ]</code></pre>
+      <h3>Source code:</h3>
+      <p><a href="https://github.com/fremdev/img-search" target="_blank">URL Shortener Microservice on GitHub</a></p>
+      <h5 class="text-center">Built by <a href="https://github.com/fremdev" target="_blank">fremdev</a> • 2016</h5>
+    </div>
+  </body>
+</html>
