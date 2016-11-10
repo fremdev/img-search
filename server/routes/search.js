@@ -5,7 +5,7 @@ const getImages = require('../utils/imgur');
 
 searchApi.get('/search/:query', (req, res) => {
   getImages(req.params.query, req.query.offset).then((data) => {
-    res.send(data)
+    res.json(data);
   });
 });
 
