@@ -1,0 +1,23 @@
+{
+  "name": "img-search",
+  "version": "1.0.0",
+  "description": "Image Search Abstraction Layer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "keywords": [
+    "image",
+    "search",
+    "freecodecamp"
+  ],
+  "author": "Alex Efremov",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
