@@ -1,14 +1,12 @@
 const request = require('request');
-
-const config = require('../config/config');
-const imgurId = process.env.IMGUR_ID || config.imgurId;
+require('dotenv').config();
 
 const getImages = (search, page = 1) => {
   return new Promise((resolve, reject) => {
 
     const options = {
       url: `https://api.imgur.com/3/gallery/search/${page}?q=${search}`,
-      headers: {Authorization: imgurId},
+      headers: {Authorization: process.env.IMGUR_ID},
       json: true
     };
 
