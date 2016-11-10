@@ -1,9 +1,12 @@
 const express = require('express');
-
 const searchApi = express.Router();
 
-searchApi.get('/search/:query', (req, res) => {
+const getImages = require('../utils/imgur');
 
+searchApi.get('/search/:query', (req, res) => {
+  getImages(req.params.query, req.query.offset).then((data) => {
+    res.send(data)
+  });
 });
 
 searchApi.get('/latest', (req, res) => {
